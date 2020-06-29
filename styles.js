@@ -17,7 +17,6 @@ export const styles = StyleSheet.create({
   headerContainer: {
     height:'20%',
     justifyContent: 'flex-start',
-    marginBottom: 20,
   },
   userInfoContainer: {
     flex:3,
@@ -46,9 +45,8 @@ export const styles = StyleSheet.create({
   },
   myWorkContents: {
     flex:8,
-    backgroundColor: '#1c1c1e',
+    backgroundColor: '#1C1C1E',
     borderRadius: 20,
-    justifyContent: 'space-between',
   },
   myWorkContent: {
     flex:1,
@@ -61,13 +59,9 @@ export const styles = StyleSheet.create({
     padding: 5,
     width: 38,
     height: 38,
-    backgroundColor: 'lawngreen',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  favoriteContainer: {
-    flex:1,
   },
   myWorkTitleContainer: {
     flex:1,
@@ -78,7 +72,7 @@ export const styles = StyleSheet.create({
     color: 'white',
     fontWeight: '500',
   },
-  favoritesContainer: {
+  favoriteContainer: {
     flex:1,
   },
 });
