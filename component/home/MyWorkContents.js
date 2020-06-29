@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, View } from 'react-native';
 import { issueIcon, organizationIcon, pullRequestIcon, repositoryIcon } from '../utils/constants';
 import MyWorkItem from './MyWorkItem';
+import { styles } from '../../styles';
 
 function MyWorkContents(props) {
   const MyWorkData = [
@@ -32,7 +33,7 @@ function MyWorkContents(props) {
   ]
 
   return (
-    <View style={{ flex: 8, backgroundColor: '#1C1C1E', }}>
+    <View style={ styles.myWorkContents }>
       <FlatList
         data={MyWorkData}
         renderItem={({ item }) => <MyWorkItem item={item}/>}
