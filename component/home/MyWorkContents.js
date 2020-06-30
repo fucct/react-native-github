@@ -8,7 +8,7 @@ function MyWorkContents(props) {
   const MyWorkData = [
     {
       id: '1',
-      name: 'Issue',
+      name: 'Issues',
       icon: issueIcon,
       backgroundColor: '#30D158',
     },
@@ -33,13 +33,13 @@ function MyWorkContents(props) {
   ]
 
   return (
-    <View style={ styles.myWorkContents }>
+    <View style={styles.myWorkContents}>
       <FlatList
         data={MyWorkData}
         renderItem={({ item }) => <MyWorkItem item={item}/>}
         keyExtractor={item => item.id}
         ItemSeparatorComponent={() => <View
-          style={{ width: '100%', height: 1, backgroundColor: '#48484A', marginLeft: 60}}/>}
+          style={{ width: '100%', height: 1, backgroundColor: 'rgb(38,38,40)', marginLeft: 60 }}/>}
       />
     </View>
   );

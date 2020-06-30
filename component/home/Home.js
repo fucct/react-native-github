@@ -1,15 +1,17 @@
 import React from 'react';
 import { styles } from '../../styles';
 import { StatusBar } from 'expo-status-bar';
-import HomeHeader from './HomeHeader';
 import HomeBody from './HomeBody';
 import { ScrollView } from 'react-native';
+import HomeTitle from './HomeTitle';
 
 function Home(props) {
   return (
-    <ScrollView style={styles.homeContainer}>
+    <ScrollView style={styles.homeContainer}
+                indicatorStyle='white'
+    >
       <StatusBar style="auto"/>
-      <HomeHeader/>
+      <HomeTitle/>
       <HomeBody/>
     </ScrollView>
   );

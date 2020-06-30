@@ -6,8 +6,6 @@ import FavoriteList from './FavoriteList';
 import RecentList from './RecentList';
 
 function HomeBody(props) {
-
-
   return (
     <View style={styles.bodyContainer}>
       <MyWorkList/>

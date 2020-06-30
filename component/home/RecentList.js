@@ -6,7 +6,7 @@ import RecentContents from './RecentContents';
 
 function FavoriteList(props) {
   return (
-    <View style={styles.myWorkContainer}>
+    <View style={{...styles.myWorkContainer, marginBottom: 50}}>
       <RecentTitle/>
       <RecentContents/>
     </View>

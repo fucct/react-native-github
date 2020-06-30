@@ -7,6 +7,16 @@ function RecentContents(props) {
   return (
     <View style={styles.myWorkContents}>
       <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
+      <Text style={styles.text}>zz</Text>
     </View>
   );
 }

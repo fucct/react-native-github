@@ -7,8 +7,8 @@ import MyWorkContents from './MyWorkContents';
 const MyWorkList = () => {
   return (
     <View style={styles.myWorkContainer}>
-      <MyWorkTitle />
-      <MyWorkContents />
+      <MyWorkTitle/>
+      <MyWorkContents/>
     </View>
   );
 }
