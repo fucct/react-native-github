@@ -5,6 +5,7 @@ import FavoriteTitle from './FavoriteTitle';
 import FavoriteContents from './FavoriteContents';
 
 function FavoriteList(props) {
+
   return (
     <View style={styles.myWorkContainer}>
       <FavoriteTitle/>

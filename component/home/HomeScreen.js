@@ -3,10 +3,11 @@ import Home from './Home';
 import { createStackNavigator } from '@react-navigation/stack';
 import UserIcon from './UserIcon';
 import AddButton from './AddButton';
+import Repositories from './Repositories';
 
 const Stack = createStackNavigator();
 
-function HomeScreen(props) {
+function HomeScreen() {
   return (
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={Home}
@@ -14,6 +15,8 @@ function HomeScreen(props) {
                       headerLeft: () => <UserIcon isCircle={true}/>,
                       headerRight: () => <AddButton/>,
                     }}
+      />
+      <Stack.Screen name="Repositories" component={Repositories}
       />
     </Stack.Navigator>
   );

@@ -5,7 +5,8 @@ import HomeScreen from './component/home/HomeScreen';
 import { Ionicons } from '@expo/vector-icons';
 import Notifications from './component/home/Notifications';
 import Search from './component/home/Search';
-import { StatusBar } from 'react-native';
+import { StatusBar, Text, View } from 'react-native';
+import { RecoilRoot } from 'recoil';
 
 const Tab = createBottomTabNavigator();
 
@@ -31,20 +32,24 @@ export default function App() {
   };
 
   return (
-    <NavigationContainer theme={DarkTheme}>
-      <StatusBar hidden/>
-      <Tab.Navigator screenOptions={screenOptions}
-                     tabBarOptions={tabBarOptions}>
-        <Tab.Screen name="Home"
-                    component={HomeScreen}
-        />
-        <Tab.Screen name="Notifications"
-                    component={Notifications}
-        />
-        <Tab.Screen name="Search"
-                    component={Search}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <RecoilRoot>
+      <React.Suspense fallback={<View><Text>Loading...</Text></View>}>
+        <NavigationContainer theme={DarkTheme}>
+          <StatusBar hidden/>
+          <Tab.Navigator screenOptions={screenOptions}
+                         tabBarOptions={tabBarOptions}>
+            <Tab.Screen name="Home"
+                        component={HomeScreen}
+            />
+            <Tab.Screen name="Notifications"
+                        component={Notifications}
+            />
+            <Tab.Screen name="Search"
+                        component={Search}
+            />
+          </Tab.Navigator>
+        </NavigationContainer>
+      </React.Suspense>
+    </RecoilRoot>
   );
 }
