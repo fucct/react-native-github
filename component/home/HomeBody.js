@@ -5,10 +5,10 @@ import MyWorkList from './MyWorkList';
 import FavoriteList from './FavoriteList';
 import RecentList from './RecentList';
 
-function HomeBody({ navigation }) {
+function HomeBody() {
   return (
     <View style={styles.bodyContainer}>
-      <MyWorkList navigation={navigation}/>
+      <MyWorkList />
       <FavoriteList/>
       <RecentList/>
     </View>

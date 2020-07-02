@@ -9,17 +9,17 @@ function Repositories(props) {
 
   const renderItem = item => {
     return (
-      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', height: 70}}>
-        <View style={{flex:1}}>
-        <Image
-          style={{...styles.tinyLogo}}
-          source={{
-            uri: item.avatar_url,
-          }}
-        />
+      <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', height: 70 }}>
+        <View style={{ flex: 1 }}>
+          <Image
+            style={{ ...styles.tinyLogo }}
+            source={{
+              uri: item.avatar_url,
+            }}
+          />
         </View>
-        <View style={{flex:8, marginHorizontal: 15}}>
-        <Text style={styles.text}>{item.full_name}</Text>
+        <View style={{ flex: 8, marginHorizontal: 15 }}>
+          <Text style={styles.text}>{item.full_name}</Text>
         </View>
       </View>
     );
@@ -29,9 +29,13 @@ function Repositories(props) {
   return (
     <View style={{ flex: 1 }}>
       <FlatList data={repositories}
-                renderItem={({item}) => renderItem(item)}
+                renderItem={({ item }) => renderItem(item)}
                 keyExtractor={item => item.id}
-                ItemSeparatorComponent={() => <View style={{height:1, flex: 1, backgroundColor: '#1C1C1E'}}/>}
+                ItemSeparatorComponent={() => <View
+                  style={{ height: 1, flex: 1, backgroundColor: '#1C1C1E' }}/>}
+                refreshing={false}
+                onRefresh={() => alert("zz")}
+                scrollsToTop={true}
       />
     </View>
   );

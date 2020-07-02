@@ -2,11 +2,14 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { styles } from '../../styles';
 import { navigationArrow } from '../utils/constants';
 import React from 'react';
+import { useNavigation } from '@react-navigation/core';
 
-const MyWorkItem = ({ navigation, item }) => {
+const MyWorkItem = ({ item }) => {
+  const navigation = useNavigation();
+
   return (
     <TouchableOpacity style={{ ...styles.myWorkContent, }}
-                      onPress={() => navigation.navigate('Repositories')}
+                      onPress={() => navigation.navigate(item.name)}
     >
       <View style={{ ...styles.iconContainer, flex:1,}}>
         <View style={{paddingTop: 2, width:33, height:33, alignItems: 'center', justifyContent: 'center', backgroundColor: `${item.backgroundColor}`, borderRadius: 5,}}>

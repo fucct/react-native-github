@@ -14,7 +14,7 @@ export const getRepositoryListState = selector({
       const { id, full_name, owner } = favorite;
       const { avatar_url } = owner;
 
-      return { id, full_name, avatar_url };
+      return { id: String(id), full_name, avatar_url };
     });
   },
 });

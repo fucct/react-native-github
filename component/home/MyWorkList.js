@@ -4,11 +4,11 @@ import { View } from 'react-native';
 import MyWorkTitle from './MyWorkTitle';
 import MyWorkContents from './MyWorkContents';
 
-const MyWorkList = ({navigation}) => {
+const MyWorkList = () => {
   return (
     <View style={styles.myWorkContainer}>
       <MyWorkTitle/>
-      <MyWorkContents navigation={navigation}/>
+      <MyWorkContents />
     </View>
   );
 }

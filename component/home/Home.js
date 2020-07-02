@@ -5,14 +5,14 @@ import HomeBody from './HomeBody';
 import { ScrollView } from 'react-native';
 import HomeTitle from './HomeTitle';
 
-function Home({ navigation }) {
+function Home() {
   return (
     <ScrollView style={styles.homeContainer}
                 indicatorStyle='white'
     >
       <StatusBar style="auto"/>
       <HomeTitle/>
-      <HomeBody navigation={navigation}/>
+      <HomeBody />
     </ScrollView>
   );
 }
